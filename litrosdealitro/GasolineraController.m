@@ -74,7 +74,7 @@
 - (void)viewDidLoad
 {
   [super viewDidLoad];
-  self.mapa.delegate = self;
+
   [self loadGasStation];
 
   UISegmentedControl *toggleViewControl = [[UISegmentedControl alloc] 
@@ -164,19 +164,19 @@
   marker.name    = [self.gasStation valueForKey:@"razonSocial"];
   marker.address = [self.gasStation valueForKey:@"direccion"];
   marker.semaforo = [[self.gasStation valueForKey:@"semaforo"] intValue];
-  [self.mapa addAnnotation:marker];
   
-  MKCoordinateSpan span;  
+  
+  /*MKCoordinateSpan span;  
   
   span.latitudeDelta  = 0.035;  
   span.longitudeDelta = 0.035;
   MKCoordinateRegion region;
   region.span = span;
-  region.center = coordinate;
+  region.center = coordinate;*/
   
-  [self.mapa setRegion:region animated:NO];
   
-  [self.mapa regionThatFits:region];
+  
+  
 }
 
 - (void)openGasStationSite 
@@ -343,20 +343,7 @@
 
   }
   annotationView.annotation = annotation;
-  GasStationMarker *marker = (GasStationMarker *)annotation;
-  switch (marker.semaforo) {
-    case 1:
-      annotationView.image = [UIImage imageNamed:@"red_marker.png"];
-      break;
-    case 2:
-      annotationView.image = [UIImage imageNamed:@"orange_marker.png"];
-      break;  
-    case 3:
-      annotationView.image = [UIImage imageNamed:@"green_marker.png"];
-      break;  
-    default:
-      break;
-  }
+  
 
   return annotationView;
   
