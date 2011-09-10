@@ -42,6 +42,7 @@
   self = [super initWithNibName:@"GasolineraController" bundle:nil];
   if (self) {
     self.stationId = theId;
+    
   }
   return self;
 }
@@ -73,6 +74,7 @@
 - (void)viewDidLoad
 {
   [super viewDidLoad];
+  self.mapa.delegate = self;
   [self loadGasStation];
 
   UISegmentedControl *toggleViewControl = [[UISegmentedControl alloc] 
@@ -154,19 +156,20 @@
 {
   NSNumber *latitude  = [self.gasStation objectForKey:@"latitude"];
   NSNumber *longitude = [self.gasStation objectForKey:@"longitude"];
+  
   CLLocationCoordinate2D coordinate;
   coordinate.latitude = latitude.doubleValue;
   coordinate.longitude = longitude.doubleValue; 
   GasStationMarker *marker = [[GasStationMarker alloc] initWithCoordinate:coordinate];
   marker.name    = [self.gasStation valueForKey:@"razonSocial"];
   marker.address = [self.gasStation valueForKey:@"direccion"];
-    
+  marker.semaforo = [[self.gasStation valueForKey:@"semaforo"] intValue];
   [self.mapa addAnnotation:marker];
   
   MKCoordinateSpan span;  
   
-  span.latitudeDelta  = 0.005;  
-  span.longitudeDelta = 0.005;
+  span.latitudeDelta  = 0.035;  
+  span.longitudeDelta = 0.035;
   MKCoordinateRegion region;
   region.span = span;
   region.center = coordinate;
@@ -186,10 +189,8 @@
   [UIView setAnimationDuration: 0.50];
   
   
-  [UIView setAnimationTransition:UIViewAnimationTransitionCurlUp forView:self.navigationController.view cache:YES];
-  
-  
-  
+  [UIView setAnimationTransition:UIViewAnimationTransitionCurlUp 
+                         forView:self.navigationController.view cache:YES];      
   
   [self.navigationController pushViewController:detailViewController animated:NO];
   
@@ -323,5 +324,42 @@
   }
 }
 
+
+#pragma mark MKMapView Delegate Methods
+
+- (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id <MKAnnotation>)annotation
+{
+  static NSString *annotationIdentifier = @"GasStationAnnotation";
+  
+  if (annotation == self.mapa.userLocation ) {
+    return nil;
+  }
+  MKAnnotationView *annotationView = (MKPinAnnotationView *)[self.mapa 
+                                         dequeueReusableAnnotationViewWithIdentifier:annotationIdentifier];
+  if (!annotationView) {
+    annotationView = [[[MKPinAnnotationView alloc] initWithAnnotation:annotation 
+                                                      reuseIdentifier:annotationIdentifier] autorelease];
+    annotationView.canShowCallout = YES;
+
+  }
+  annotationView.annotation = annotation;
+  GasStationMarker *marker = (GasStationMarker *)annotation;
+  switch (marker.semaforo) {
+    case 1:
+      annotationView.image = [UIImage imageNamed:@"red_marker.png"];
+      break;
+    case 2:
+      annotationView.image = [UIImage imageNamed:@"orange_marker.png"];
+      break;  
+    case 3:
+      annotationView.image = [UIImage imageNamed:@"green_marker.png"];
+      break;  
+    default:
+      break;
+  }
+
+  return annotationView;
+  
+}
 
 @end

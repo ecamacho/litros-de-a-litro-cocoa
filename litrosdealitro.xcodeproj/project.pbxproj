@@ -20,7 +20,6 @@
 		A71F85D91416E3EE00584F35 /* price_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = A71F85D71416E3EE00584F35 /* price_icon.png */; };
 		A71F85E21416E64600584F35 /* CercanasController.m in Sources */ = {isa = PBXBuildFile; fileRef = A71F85E01416E64600584F35 /* CercanasController.m */; };
 		A71F85E31416E64600584F35 /* CercanasController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A71F85E11416E64600584F35 /* CercanasController.xib */; };
-		A71F85E51416EB8900584F35 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A71F85E41416EB8900584F35 /* CoreLocation.framework */; };
 		A7310CC11412F04400C788EF /* ASIAuthenticationDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = A7310CAC1412F04400C788EF /* ASIAuthenticationDialog.m */; };
 		A7310CC21412F04400C788EF /* ASIDataCompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = A7310CAF1412F04400C788EF /* ASIDataCompressor.m */; };
 		A7310CC31412F04400C788EF /* ASIDataDecompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = A7310CB11412F04400C788EF /* ASIDataDecompressor.m */; };
@@ -67,6 +66,9 @@
 		A757FC9314140E95002D3025 /* orange_light.png in Resources */ = {isa = PBXBuildFile; fileRef = A757FC9214140E95002D3025 /* orange_light.png */; };
 		A757FC95141416B1002D3025 /* station.json in Resources */ = {isa = PBXBuildFile; fileRef = A757FC94141416B1002D3025 /* station.json */; };
 		A757FCA114144A12002D3025 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A757FCA014144A12002D3025 /* QuartzCore.framework */; };
+		A797E483141BE1630017CCB9 /* green_marker.png in Resources */ = {isa = PBXBuildFile; fileRef = A797E480141BE1630017CCB9 /* green_marker.png */; };
+		A797E484141BE1630017CCB9 /* orange_marker.png in Resources */ = {isa = PBXBuildFile; fileRef = A797E481141BE1630017CCB9 /* orange_marker.png */; };
+		A797E485141BE1630017CCB9 /* red_marker.png in Resources */ = {isa = PBXBuildFile; fileRef = A797E482141BE1630017CCB9 /* red_marker.png */; };
 		A79DDBDC13C89EB500559554 /* gasolinera.png in Resources */ = {isa = PBXBuildFile; fileRef = A79DDBDB13C89EB500559554 /* gasolinera.png */; };
 		A79DDBDF13C89F2C00559554 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A79DDBDE13C89F2C00559554 /* MapKit.framework */; };
 		A7C2AAED13C7D36700FD47E2 /* cercanas_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = A7C2AAEB13C7D36700FD47E2 /* cercanas_icon.png */; };
@@ -96,7 +98,6 @@
 		A71F85DF1416E64600584F35 /* CercanasController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CercanasController.h; sourceTree = "<group>"; };
 		A71F85E01416E64600584F35 /* CercanasController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CercanasController.m; sourceTree = "<group>"; };
 		A71F85E11416E64600584F35 /* CercanasController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CercanasController.xib; sourceTree = "<group>"; };
-		A71F85E41416EB8900584F35 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		A7310CAB1412F04400C788EF /* ASIAuthenticationDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIAuthenticationDialog.h; sourceTree = "<group>"; };
 		A7310CAC1412F04400C788EF /* ASIAuthenticationDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIAuthenticationDialog.m; sourceTree = "<group>"; };
 		A7310CAD1412F04400C788EF /* ASICacheDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASICacheDelegate.h; sourceTree = "<group>"; };
@@ -172,6 +173,9 @@
 		A757FC9214140E95002D3025 /* orange_light.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = orange_light.png; path = images/orange_light.png; sourceTree = SOURCE_ROOT; };
 		A757FC94141416B1002D3025 /* station.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = station.json; sourceTree = "<group>"; };
 		A757FCA014144A12002D3025 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		A797E480141BE1630017CCB9 /* green_marker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = green_marker.png; path = images/green_marker.png; sourceTree = SOURCE_ROOT; };
+		A797E481141BE1630017CCB9 /* orange_marker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = orange_marker.png; path = images/orange_marker.png; sourceTree = SOURCE_ROOT; };
+		A797E482141BE1630017CCB9 /* red_marker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = red_marker.png; path = images/red_marker.png; sourceTree = SOURCE_ROOT; };
 		A79DDBDB13C89EB500559554 /* gasolinera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = gasolinera.png; path = images/gasolinera.png; sourceTree = SOURCE_ROOT; };
 		A79DDBDE13C89F2C00559554 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		A7C2AAEB13C7D36700FD47E2 /* cercanas_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = cercanas_icon.png; path = images/cercanas_icon.png; sourceTree = SOURCE_ROOT; };
@@ -183,7 +187,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A71F85E51416EB8900584F35 /* CoreLocation.framework in Frameworks */,
 				A757FCA114144A12002D3025 /* QuartzCore.framework in Frameworks */,
 				A7310CD21412F18900C788EF /* libz.1.2.3.dylib in Frameworks */,
 				A7310CD01412F17A00C788EF /* MobileCoreServices.framework in Frameworks */,
@@ -325,7 +328,6 @@
 		A74C7EB613C6BC4C00C99635 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				A71F85E41416EB8900584F35 /* CoreLocation.framework */,
 				A757FCA014144A12002D3025 /* QuartzCore.framework */,
 				A7310CD11412F18900C788EF /* libz.1.2.3.dylib */,
 				A7310CCF1412F17A00C788EF /* MobileCoreServices.framework */,
@@ -371,6 +373,9 @@
 		A7C2AAE913C7D34B00FD47E2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				A797E480141BE1630017CCB9 /* green_marker.png */,
+				A797E481141BE1630017CCB9 /* orange_marker.png */,
+				A797E482141BE1630017CCB9 /* red_marker.png */,
 				A71F85D61416E3EE00584F35 /* info_icon.png */,
 				A71F85D71416E3EE00584F35 /* price_icon.png */,
 				A757FC9214140E95002D3025 /* orange_light.png */,
@@ -500,6 +505,9 @@
 				A71F85D81416E3EE00584F35 /* info_icon.png in Resources */,
 				A71F85D91416E3EE00584F35 /* price_icon.png in Resources */,
 				A71F85E31416E64600584F35 /* CercanasController.xib in Resources */,
+				A797E483141BE1630017CCB9 /* green_marker.png in Resources */,
+				A797E484141BE1630017CCB9 /* orange_marker.png in Resources */,
+				A797E485141BE1630017CCB9 /* red_marker.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

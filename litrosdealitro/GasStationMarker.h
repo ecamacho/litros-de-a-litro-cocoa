@@ -13,11 +13,13 @@
 {
   NSString *name;
   NSString *address;
+  NSInteger semaforo;
   CLLocationCoordinate2D coordinate;
 }
 
 @property (nonatomic, retain) NSString *name;
 @property (nonatomic, retain) NSString *address;
+@property (nonatomic, assign) NSInteger semaforo;
 @property (nonatomic, readonly) CLLocationCoordinate2D coordinate;
 
 - (id)initWithCoordinate:(CLLocationCoordinate2D)theCoordinate;

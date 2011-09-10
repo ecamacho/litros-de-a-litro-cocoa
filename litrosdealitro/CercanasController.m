@@ -26,15 +26,14 @@
 
 @synthesize gasolineras;
 @synthesize request;
-@synthesize locationManager;
+
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
     if (self) {
       self.title = @"Cercanas";
-      self.locationManager = [[[CLLocationManager alloc] init] autorelease];
-      self.locationManager.delegate = self; 
+      
     }
     return self;
 }
@@ -42,7 +41,7 @@
 - (void)dealloc
 {
   [gasolineras release];
-  [locationManager release];
+  
   [super dealloc];
 }
 
@@ -52,8 +51,7 @@
 - (void)viewDidLoad
 {
   [super viewDidLoad];
-  [locationManager startUpdatingLocation];
-
+  
 }
 
 #pragma mark private methods
@@ -156,12 +154,13 @@
 
 #pragma mark CLocation Delegate Methods
 
+/*
 - (void)locationManager:(CLLocationManager *)manager
     didUpdateToLocation:(CLLocation *)newLocation
            fromLocation:(CLLocation *)oldLocation
 {
   NSLog(@"updated %f %f ", newLocation.coordinate.latitude, newLocation.coordinate.longitude);
-  [locationManager stopUpdatingLocation];
+  
   [self loadGasolinerasInLatitude:newLocation.coordinate.latitude andLongitude:newLocation.coordinate.longitude];
 }
 
@@ -175,7 +174,7 @@
                                        otherButtonTitles:nil];
   [alert show];
   [alert release];
-}
+}*/
 
 #pragma mark ASIHTTPRequest delegate methods
 

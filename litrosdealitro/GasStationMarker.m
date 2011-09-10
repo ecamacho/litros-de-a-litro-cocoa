@@ -12,6 +12,7 @@
 
 @synthesize name;
 @synthesize address;
+@synthesize semaforo;
 @synthesize coordinate;
 
 - (id)initWithCoordinate:(CLLocationCoordinate2D)theCoordinate

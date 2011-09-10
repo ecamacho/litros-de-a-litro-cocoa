@@ -10,7 +10,7 @@
 #import <MapKit/MapKit.h>
 #import "ASIHTTPRequest.h"
 
-@interface GasolineraController : UIViewController<UITableViewDataSource,UITableViewDelegate>
+@interface GasolineraController : UIViewController<UITableViewDataSource,UITableViewDelegate, MKMapViewDelegate>
 {
   MKMapView *mapa;    
   UIView* infoView;
