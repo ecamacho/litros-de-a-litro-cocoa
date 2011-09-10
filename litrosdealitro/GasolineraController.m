@@ -75,7 +75,7 @@
 {
   [super viewDidLoad];
 
-  [self loadGasStation];
+  
 
   UISegmentedControl *toggleViewControl = [[UISegmentedControl alloc] 
                                            initWithItems:[NSArray arrayWithObjects: @"Info", @"Mapa", nil]];
@@ -88,6 +88,12 @@
   [toggleViewControl release];
   [toggleViewBarItem release];
     
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+  [super viewDidAppear:animated];
+  [self loadGasStation];
 }
 
 - (void)viewDidUnload
@@ -327,7 +333,8 @@
 
 #pragma mark MKMapView Delegate Methods
 
-- (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id <MKAnnotation>)annotation
+- (MKAnnotationView *)mapView:(MKMapView *)mapView 
+            viewForAnnotation:(id <MKAnnotation>)annotation
 {
   static NSString *annotationIdentifier = @"GasStationAnnotation";
   

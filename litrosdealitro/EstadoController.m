@@ -66,6 +66,12 @@
 {
   [super viewDidLoad];
 
+  
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+  [super viewDidAppear:animated];
   [self loadEstados];
 }
 
@@ -76,10 +82,6 @@
 }
 
 
-- (void)viewDidAppear:(BOOL)animated
-{
-    [super viewDidAppear:animated];
-}
 
 
 #pragma mark - Table view data source
