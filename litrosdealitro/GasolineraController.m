@@ -75,7 +75,7 @@
 {
   [super viewDidLoad];
 
-  
+  self.mapa.delegate = self;
 
   UISegmentedControl *toggleViewControl = [[UISegmentedControl alloc] 
                                            initWithItems:[NSArray arrayWithObjects: @"Info", @"Mapa", nil]];
@@ -171,14 +171,16 @@
   marker.address = [self.gasStation valueForKey:@"direccion"];
   marker.semaforo = [[self.gasStation valueForKey:@"semaforo"] intValue];
   
-  
-  /*MKCoordinateSpan span;  
+  [self.mapa addAnnotation:marker];
+  MKCoordinateSpan span;  
   
   span.latitudeDelta  = 0.035;  
   span.longitudeDelta = 0.035;
   MKCoordinateRegion region;
   region.span = span;
-  region.center = coordinate;*/
+  region.center = coordinate;
+  
+  [self.mapa setRegion:region];
   
   
   
@@ -351,7 +353,8 @@
   }
   annotationView.annotation = annotation;
   
-
+  annotationView.image = [UIImage imageNamed:@"orange_marker.png"];
+  annotationView.rightCalloutAccessoryView = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
   return annotationView;
   
 }

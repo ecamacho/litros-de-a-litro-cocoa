@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A7051454141C34FA006E5673 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7051453141C34FA006E5673 /* CoreLocation.framework */; };
 		A71970E814144D2800D4C5DC /* FullImageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A71970E714144D2800D4C5DC /* FullImageTableViewCell.m */; };
 		A71970F8141472E300D4C5DC /* EGOCache.m in Sources */ = {isa = PBXBuildFile; fileRef = A71970EC141472E300D4C5DC /* EGOCache.m */; };
 		A71970F9141472E300D4C5DC /* EGOImageButton.m in Sources */ = {isa = PBXBuildFile; fileRef = A71970EF141472E300D4C5DC /* EGOImageButton.m */; };
@@ -76,6 +77,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A7051453141C34FA006E5673 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		A71970E614144D2800D4C5DC /* FullImageTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FullImageTableViewCell.h; sourceTree = "<group>"; };
 		A71970E714144D2800D4C5DC /* FullImageTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FullImageTableViewCell.m; sourceTree = "<group>"; };
 		A71970EB141472E300D4C5DC /* EGOCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGOCache.h; sourceTree = "<group>"; };
@@ -187,6 +189,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7051454141C34FA006E5673 /* CoreLocation.framework in Frameworks */,
 				A757FCA114144A12002D3025 /* QuartzCore.framework in Frameworks */,
 				A7310CD21412F18900C788EF /* libz.1.2.3.dylib in Frameworks */,
 				A7310CD01412F17A00C788EF /* MobileCoreServices.framework in Frameworks */,
@@ -332,6 +335,7 @@
 				A7310CD11412F18900C788EF /* libz.1.2.3.dylib */,
 				A7310CCF1412F17A00C788EF /* MobileCoreServices.framework */,
 				A7310CCD1412F17100C788EF /* SystemConfiguration.framework */,
+				A7051453141C34FA006E5673 /* CoreLocation.framework */,
 				A7310CCB1412F12700C788EF /* CFNetwork.framework */,
 				A79DDBDE13C89F2C00559554 /* MapKit.framework */,
 				A74C7EB713C6BC4C00C99635 /* UIKit.framework */,

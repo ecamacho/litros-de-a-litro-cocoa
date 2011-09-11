@@ -8,16 +8,16 @@
 
 #import <UIKit/UIKit.h>
 #import "ASIHTTPRequest.h"
+#import <CoreLocation/CoreLocation.h>
 
-
-@interface CercanasController : UITableViewController
+@interface CercanasController : UITableViewController<CLLocationManagerDelegate>
 {
   NSArray *gasolineras;
-
+  CLLocationManager *locationManager;
 }
 
 @property(nonatomic, retain) NSArray *gasolineras;
 @property(nonatomic, retain) ASIHTTPRequest *request;
-
+@property(nonatomic, retain) CLLocationManager *locationManager;
 
 @end

@@ -26,14 +26,16 @@
 
 @synthesize gasolineras;
 @synthesize request;
-
+@synthesize locationManager;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
     if (self) {
       self.title = @"Cercanas";
-      
+      self.locationManager = [[CLLocationManager alloc] init];
+      self.locationManager.desiredAccuracy = kCLLocationAccuracyKilometer;
+      self.locationManager.delegate = self;
     }
     return self;
 }
@@ -53,6 +55,11 @@
   [super viewDidLoad];
 }
 
+- (void)viewDidAppear:(BOOL)animated
+{
+  [super viewDidAppear:animated];
+  [self.locationManager startUpdatingLocation];
+}
 #pragma mark private methods
 
 - (void)loadGasolinerasInLatitude:(double)latitude andLongitude:(double)longitude
@@ -65,7 +72,7 @@
   NSLog(@"urlRequest %@", urlRequest);
   request = [ASIHTTPRequest requestWithURL:[NSURL URLWithString:urlRequest]];
   [request setDelegate:self];
-  [request startSynchronous]; 
+  [request startAsynchronous];
 }
 
 - (void)loadGasolinerasStub
@@ -153,12 +160,15 @@
 
 #pragma mark CLocation Delegate Methods
 
-/*
+
 - (void)locationManager:(CLLocationManager *)manager
     didUpdateToLocation:(CLLocation *)newLocation
            fromLocation:(CLLocation *)oldLocation
 {
-  NSLog(@"updated %f %f ", newLocation.coordinate.latitude, newLocation.coordinate.longitude);
+  NSLog(@"updated %f %f ", 
+        newLocation.coordinate.latitude, 
+        newLocation.coordinate.longitude
+        );
   
   [self loadGasolinerasInLatitude:newLocation.coordinate.latitude andLongitude:newLocation.coordinate.longitude];
 }
@@ -173,7 +183,7 @@
                                        otherButtonTitles:nil];
   [alert show];
   [alert release];
-}*/
+}
 
 #pragma mark ASIHTTPRequest delegate methods
 
