@@ -47,7 +47,7 @@
 {
   request = [ASIHTTPRequest requestWithURL:[NSURL URLWithString:ESTADOS_SERVICE_URL]];
   [request setDelegate:self];
-  [request startSynchronous]; 
+  [request startAsynchronous]; 
 }
 - (void)loadEstadosStub {
   NSString *filePath = [[NSBundle mainBundle] pathForResource:@"estados" ofType:@"json"];

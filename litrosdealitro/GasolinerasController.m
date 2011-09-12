@@ -74,7 +74,7 @@
   NSLog(@"urlRequest %@", urlRequest);
   request = [ASIHTTPRequest requestWithURL:[NSURL URLWithString:urlRequest]];
   [request setDelegate:self];
-  [request startSynchronous]; 
+  [request startAsynchronous]; 
 }
 
 - (void)loadGasolinerasStub
